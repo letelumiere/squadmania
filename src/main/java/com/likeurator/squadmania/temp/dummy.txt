@@ -1,5 +1,128 @@
-package com.likeurator.squadmania.test;
+package com.likeurator.squadmania.temp;
 
+public class TheEntities {
+    /*
+    public static class BadHistoryEntity{
+        private String commentid;
+        private String nickname;
+    }
+
+    public static class CommentEntity{
+        private String comment;
+        private String playerid;
+        private String nickname;
+        private Long reportbad;
+        private Long recommend;
+    }
+
+    public static class PermissionEntity{
+        private String type;
+        private String controller;
+        private String action;
+        private boolean enabled;
+        private String policy;
+        private String role; //??
+        private String nickname;
+        private String icon;
+        private String other1;
+        private Long other2;
+    }
+
+    public static class RoleEntity{
+        private String name;
+        private String description;
+        private String type;
+        private String permissions; //?
+        private String users; //?
+    }
+
+    public static class UserEntity{
+        private String username;
+        private String email;
+        private String provider;
+        private String password;
+        private String resetPasswordToken;
+        private String confirmationToken;
+        private String confirmed;
+        private String blocked;
+        private String role;
+        private String nickname;
+        private String icon;
+        private String other1;
+        private Long other2;
+    }
+
+    public static class PlayerRatingEntity{
+        private String playerid;
+        private Long rating;
+        private Long howmanyusers;
+    }
+
+    public static class RatingHistoryEntity{
+        private String playerid;
+        private String nickname;
+        private Long rating;
+    }
+
+    public static class RecommendHistoryEntity{
+        private String nickname;
+        private String commentid;
+    }
+    */
+}
+
+
+
+public class TemplateConfig {
+/*
+    @Bean
+    public RestTemplate restTemplate(RestTemplateBuilder restTemplateBuilder) {
+        return restTemplateBuilder
+        		.requestFactory(() -> new BufferingClientHttpRequestFactory(new SimpleClientHttpRequestFactory()))
+                .setConnectTimeout(Duration.ofMillis(5000)) // connection-timeout
+                .setReadTimeout(Duration.ofMillis(5000)) // read-timeout
+                .additionalMessageConverters(new StringHttpMessageConverter(Charset.forName("UTF-8")))
+                .build();
+	}
+}
+*/
+}
+
+public class TestController {
+/*
+	@Resource(name = "FifaonService")
+	private FifaonService fifaonService;
+	
+	@GetMapping("/searchUserInfo")
+	public Users searchUserInfo(Model model, Users users, @RequestParam(defaultValue = "보잉수")String nickname) {
+		users = fifaonService.SearchUserByNickname(nickname);		
+		return users;
+	}
+	
+	@GetMapping("/searchMatchList")
+	public List<Object> searchMatchList(Model model, Users users, @RequestParam(defaultValue = "보잉수")String nickname) {
+		users = fifaonService.SearchUserByNickname(nickname);		
+		List<Object> matchList = fifaonService.SearchMatchListByAccessId(users.getAccessId());
+		return matchList;
+	}
+	
+	@GetMapping("/readMatchInfo")
+	public Match matchDetail(Model model, @RequestParam(defaultValue = "6075f4b53881e6f7e19cd3ac")String matchId) {
+		System.out.println(matchId);
+		Match match = fifaonService.ReadMatchInfoDetail(matchId);		
+		return match;
+	}
+*/
+}
+
+public class TestService {
+/*
+    public Users SearchUserByNickname(String nickname);
+	public List<Object> SearchMatchListByAccessId(String accessId);
+	public Match ReadMatchInfoDetail(String matchId);
+}
+*/
+}
 
 public class TestServiceImpl {
 	/*
