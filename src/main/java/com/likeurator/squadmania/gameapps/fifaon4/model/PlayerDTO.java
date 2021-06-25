@@ -9,13 +9,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-
+/*
 @Getter
 @Setter
 @ToString
 @NoArgsConstructor
-public class PlayerDatabaseDTO {
-    
+public class PlayerDTO {
+
     @MongoId
     private ObjectId _id;
     private String playerid;
@@ -91,7 +91,7 @@ public class PlayerDatabaseDTO {
     private String club;
 
     @Builder
-    public PlayerDatabaseDTO(ObjectId _id, String playerid, long seasonid, String name, long mainOvr, String playerPic,
+    public PlayerDTO(ObjectId _id, String playerid, long seasonid, String name, long mainOvr, String playerPic,
             String seasonIcon, long pay, String mainPosi, String nation, String nationPic, String liveStatus,
             String birth, long height, long weight, String physical, String skill, String foot, String mainFoot,
             String etcSeason, long speed, long accel, long decision, long shootPower, long longShoot, long positioning,
@@ -176,8 +176,8 @@ public class PlayerDatabaseDTO {
         this.club = club;
     }
     
-    public PlayerDatabaseDTO documentToDTO(PlayerDatabase player) {
-        PlayerDatabaseDTO playerDto = new PlayerDatabaseDTO();
+    public PlayerDTO documentToDTO(Player player) {
+        PlayerDTO playerDto = new PlayerDTO();
         playerDto.set_id(player.get_id());
         playerDto.setPlayerid(player.getPlayerid());
         playerDto.setSeasonid(player.getSeasonid());
@@ -253,8 +253,8 @@ public class PlayerDatabaseDTO {
         return playerDto;
     }
     
-    public PlayerDatabase toDocumentBuild() {
-        PlayerDatabase player = PlayerDatabase.builder()
+    public Player toDocumentBuild() {
+        Player player = Player.builder()
                                         ._id(_id)
                                         .playerid(playerid)
                                         .seasonid(seasonid)
@@ -328,7 +328,9 @@ public class PlayerDatabaseDTO {
                                         .club(club)
                                         .build();
         return player;
+
     }
 }
 
 
+*/

@@ -1,6 +1,7 @@
-package com.likeurator.squadmania.game_app.fifaon4.model;
+package com.likeurator.squadmania.gameapps.fifaon4.model;
 
 //DTO class Followed by nexon Developer's API Standard. just keeping.
+/*
 public class NexonDevDTO {
     
     public static class Defence {
@@ -185,5 +186,5 @@ public class NexonDevDTO {
         private String level;
     }
 }
-    */
-
+  
+*/
