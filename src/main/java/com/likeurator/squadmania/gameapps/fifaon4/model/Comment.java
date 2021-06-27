@@ -1,7 +1,6 @@
 package com.likeurator.squadmania.gameapps.fifaon4.model;
 
 
-import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 import org.springframework.data.annotation.CreatedDate;

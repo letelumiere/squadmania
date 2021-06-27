@@ -1,6 +1,5 @@
 package com.likeurator.squadmania.gameapps.fifaon4;
 
-import java.lang.System.Logger;
 import java.util.List;
 import java.util.Optional;
 
