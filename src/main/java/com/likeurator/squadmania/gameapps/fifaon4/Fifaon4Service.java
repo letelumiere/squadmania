@@ -26,6 +26,10 @@ public class Fifaon4Service{
     @Autowired
     private CommentRepository commentRepository;
 
+    /* 추후 크롤링 구현 용 */
+    //public void insertPlayer(){}
+    //public void findOneAndUpdatePlayer(){}
+    //public void findOneAnddeletePlayer(){}
     //public void createPlayer(){}
     //public void findOnePlayer(){}
 
@@ -47,10 +51,6 @@ public class Fifaon4Service{
         return playerRepository.findAllPlayerByName(name);
     }
 
-    /* 추후 크롤링 구현 용 */
-    //public void insertPlayer(){}
-    //public void findOneAndUpdatePlayer(){}
-    //public void findOneAnddeletePlayer(){}
 
     public Optional<Comment> findOneCommentById(String id){
         return commentRepository.findById(id);
@@ -77,97 +77,3 @@ public class Fifaon4Service{
         commentRepository.deleteById(_id);
     }
 }
-
-/*
-
-    public void updateExpense(Expense expense){
-        Expense savedExpense = expenseRepository.findById(expense.getId())
-                .orElseThrow(() -> new RuntimeException(
-                        String.format("Cannot Find Expense by ID %s", expense.getId())));
-        savedExpense.setExpenseName(expense.getExpenseName());
-        savedExpense.setExpenseCategory(expense.getExpenseCategory());
-        savedExpense.setExpenseAmount(expense.getExpenseAmount());
-
-        expenseRepository.save(expense);
-    }
-*/
-
-/*    
-    public List<PlayerDatabaseDTO> findAllWithPageable(){
-        PageRequest pageable = PageRequest.of(0, 10);
-        Page<PlayerDatabase> playerDB = playerDatabaseRepository.findAll(pageable);
-        List<PlayerDatabaseDTO> playerDtoList = new ArrayList<PlayerDatabaseDTO>();
-
-        for(PlayerDatabase player : playerDB){
-            PlayerDatabaseDTO playerDto = new PlayerDatabaseDTO();
-            playerDtoList.add(playerDto.documentToDTO(player));
-        }
-
-        return playerDtoList; 
-    }
-    public PlayerDatabaseDTO findOneByPlayerid(String playerid) {
-        return playerDatabaseRepository.findByPlayerid(playerid);
-    }
-
-    public List<PlayerDatabaseDTO> findAllByNames(String name) {
-        return playerDatabaseRepository.findByNames(name);
-    }
-    
-    public List<CommentsDTO> findAllCommentsByPlayerid(String playerid){
-        return commentsRepository.findByPlayerid(playerid);
-    }
-    
-    public Comments insertComment(CommentsDTO commentsDto){
-        return commentsRepository.save(commentsDto.toDocumentBuild());
-    }
-    //player에서 
-    /*
-    public List<PlayerDatabaseDTO> findAll(){
-        List<PlayerDatabase> playerDB = fifaon4repository.findAll();
-        List<PlayerDatabaseDTO> playerDtoList = new ArrayList<PlayerDatabaseDTO>();
-
-        for(PlayerDatabase player : playerDB){
-            PlayerDatabaseDTO playerDto = new PlayerDatabaseDTO();
-            playerDtoList.add(playerDto.documentToDTO(player));
-        }
-
-        return playerDtoList;
-    }
-
-    public List<PlayerDatabaseDTO> findAllWithPageable(){
-        PageRequest pageable = PageRequest.of(0, 10);
-        Page<PlayerDatabase> playerDB = fifaon4repository.findAll(pageable);
-        List<PlayerDatabaseDTO> playerDtoList = new ArrayList<PlayerDatabaseDTO>();
-
-        for(PlayerDatabase player : playerDB){
-            PlayerDatabaseDTO playerDto = new PlayerDatabaseDTO();
-            playerDtoList.add(playerDto.documentToDTO(player));
-        }
-
-        return playerDtoList; 
-    }
-
-    public List<PlayerDatabaseDTO> findByAllNames(String name){
-        List<PlayerDatabaseDTO> playerDtoList = fifaon4repository.findByAllNames(name);
-        
-        return playerDtoList;
-    }
-
-    public Comments insertComment(CommentsDTO commentsDto){
-        Comments comments = commentsDto.toDocumentBuild();
-        return commentRepository.save(comments);
-    }
-
-    public List<CommentsDTO> readCommentsByPlayerid(String playerid){
-        List<CommentsDTO> commentsDtoList = commentRepository.readCommentsByPlayerid(playerid);
-        return commentsDtoList;
-    }
-
-}
-    public Comments insertComment(CommentsDTO commentsDto){
-        Comments comments = commentsDto.toDocumentBuild();
-        System.out.println(comments);
-        return commentRepository.save(comments);
-    }
-    
-*/
