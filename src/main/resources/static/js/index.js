@@ -18,10 +18,15 @@ searchBtn.addEventListener('click', () => {
     searchInput.value='';
 });
 
+temp.addEventListener('click', ()=>{
+    getPlayer('데이비드 베컴');
+});
 
+
+/*
 temp.addEventListener('click', ()=>{
     getMatchDetail('5d7cac52733bc1e5feac44b2');
 });
 
 const a = new FifaonAPI();
-
+*/

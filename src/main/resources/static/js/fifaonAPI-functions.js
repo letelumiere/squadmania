@@ -2,7 +2,7 @@
 
 // REST API호출을 위한 함수 선언식 - 유저 정보 검색.
 // OverLoading이 가능할까?
-
+/*
 class FifaonAPI {
     constructor(){
         this.myInit = {
@@ -32,6 +32,16 @@ class FifaonAPI {
                     .catch(error => console.log(error));
     }
 
+}
+*/
+async function getPlayer(name) {
+    const param = {
+        "name": name
+    };
+    const result = await fetch(`http://localhost:8080/fifaonline4/api/player/${name}`)
+                    .then(response => response.json())
+                    .catch(error => console.log(error));
+    console.log(result);
 }
 
 
