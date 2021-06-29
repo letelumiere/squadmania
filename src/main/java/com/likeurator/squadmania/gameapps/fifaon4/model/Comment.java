@@ -3,6 +3,8 @@ package com.likeurator.squadmania.gameapps.fifaon4.model;
 
 import java.time.LocalDateTime;
 
+import com.likeurator.squadmania.domain.model.TimeEntity;
+
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -17,7 +19,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Document(collection = "comments_test")
-public class Comment{
+public class Comment {
 
     @Id
     @Indexed(unique = true)

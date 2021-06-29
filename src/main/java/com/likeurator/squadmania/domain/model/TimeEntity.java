@@ -1,4 +1,4 @@
-package com.likeurator.squadmania.domain;
+package com.likeurator.squadmania.domain.model;
 
 import org.joda.time.LocalDateTime;
 import org.springframework.data.annotation.CreatedDate;

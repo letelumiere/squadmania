@@ -1,13 +1,12 @@
 스쿼드 매니아 필수 기능
 
-
+2021-06-27?
 === 회원정보 ===
 - 로그인
 - 회원가입
 - 회원정보수정
 - 알림
 - 작성글 열람
-
 
 
 === 게임DB ===
@@ -25,6 +24,54 @@
 
 
 
+2021-06-29
+===account, login, logout===
+
+- LoginController 
+ * 로그인
+ * 로그아웃
+ * 쿠키
+ * 권한에 따른 기능 설정
+
+- AccountController
+ * 회원가입
+ * 회원정보수정
+ * 쓴 글, 댓글, 좋아요 등등 보기
+ * 회원삭제
+ * 회원별 권한부여
+ * 알림설정
+
+
+- AdminController? (domain)
+ * 어떤 기능이 필요할까?
+ * 왜 필요할까?
+
+- ContentsController? (domain)
+ * 추후 domain 패키지로 옮겨서 글, 댓글 작성 통합할 생각 있음
+ * 글 작성, 좋아요 등의 기능처리?
+
+- CrawlController? (gameapps)
+ * 만약 운영이 확장될 시, gameapps 패키지에 인터페이스 작성
+ * role은 admin에게만.
+
+
+
+
+기타 사항
+- properties 및 gradle 정리 필요함.
+- fifaon4.model.player의 document(entity) field 정리 필요.
+- TimeEntity를 domain에서 각 document로 상속할 방도 찾을 것. 
+
+
+
+
+
+
+
+
+===
+===
+=== 이전에 작성한 코드들. ===
 package com.likeurator.squadmania.temp;
 
 public class TheEntities {
