@@ -10,11 +10,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CommentRepository extends MongoRepository<Comment, String>{
-
-    @Query("{'spid': ?0}")
-    List<Comment> findAllCommmentBySpid(int spid);
-
-    @Query("{'_id' : ?0")
-    Comment findOneCommentById(String _id);
-
+    @Query("{'spid': ?0}") List<Comment> findAllCommmentBySpid(int spid);
+    @Query("{'_id' : ?0") Comment findOneCommentById(String _id);
 }

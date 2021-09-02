@@ -27,17 +27,11 @@ import lombok.AllArgsConstructor;
 */
 
 
-@RestController
-@RequestMapping(value = "/fifaonline4")
-@AllArgsConstructor
+@RestController @AllArgsConstructor
+@RequestMapping("/fifaonline4") 
 public class Fifaon4Controller {
-
     @Autowired
     private Fifaon4Service fifaon4Service;
-
-    //public void createPlayer(){}
-    //public void updatePlayer(){}
-    //public void deletePlayer(){}
 
     @GetMapping("/api/player")
     public ResponseEntity<List<Player>> findAllPlayer(){

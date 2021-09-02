@@ -15,22 +15,12 @@ import org.springframework.stereotype.Service;
 
 import lombok.AllArgsConstructor;
 
-@AllArgsConstructor
-@Service
+@Service @AllArgsConstructor
 public class Fifaon4Service{
-
-    @Autowired  
+    @Autowired 
     private PlayerRepository playerRepository;
-
-    @Autowired
-    private CommentRepository commentRepository;
-
-    /* 추후 크롤링 구현 용 */
-    //public void insertPlayer(){}
-    //public void findOneAndUpdatePlayer(){}
-    //public void findOneAnddeletePlayer(){}
-    //public void createPlayer(){}
-    //public void findOnePlayer(){}
+    
+    @Autowired private CommentRepository commentRepository;
 
     public List<Player> findAllPlayer(){
         return playerRepository.findAll();
@@ -75,4 +65,12 @@ public class Fifaon4Service{
     public void deleteComment(String _id){
         commentRepository.deleteById(_id);
     }
+
+        /* 추후 크롤링 구현 용 */
+    //public void insertPlayer(){}
+    //public void findOneAndUpdatePlayer(){}
+    //public void findOneAnddeletePlayer(){}
+    //public void createPlayer(){}
+    //public void findOnePlayer(){}
+
 }
