@@ -27,8 +27,8 @@ import lombok.AllArgsConstructor;
 */
 
 
-@RestController @AllArgsConstructor
-@RequestMapping("/fifaonline4") 
+@RestController 
+@RequestMapping("/fifaonline4") @AllArgsConstructor
 public class Fifaon4Controller {
     @Autowired
     private Fifaon4Service fifaon4Service;

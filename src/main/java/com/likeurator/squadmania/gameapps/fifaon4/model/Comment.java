@@ -13,7 +13,8 @@ import lombok.*;
 
 
 
-@Document(collection = "comments_test") @Data @Builder @AllArgsConstructor @NoArgsConstructor
+@Document(collection = "comments_test") 
+@Data @Builder @AllArgsConstructor @NoArgsConstructor
 public class Comment {
     @Id @Indexed(unique = true) private String _id;
     @Field(name = "contents") private String contents;

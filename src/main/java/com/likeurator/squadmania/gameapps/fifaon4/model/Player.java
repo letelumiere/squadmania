@@ -9,7 +9,8 @@ import org.springframework.data.mongodb.core.mapping.Field;
 
 import lombok.*;
 
-@Document(collection = "players_test") @Data @AllArgsConstructor @NoArgsConstructor
+@Document(collection = "players_test") 
+@Data @AllArgsConstructor @NoArgsConstructor
 public class Player {
     @Id @Indexed(unique = true) private String _id;
     @Indexed(unique = true) @Field(name = "spid") private int spid;

@@ -13,10 +13,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PlayerRepository extends MongoRepository<Player, String> {
-
     @Query("{'information.name': ?0}") List<Player> findAllPlayerByName(String name);
     @Query("{'spid': ?0}") Player findOnePlayerBySpid(int spid);
-    
     @Aggregation({"{$match: {spid : ?0}}", 
                     "{$graphLookup: {from: 'comments_test',startWith: '$spid',connectFromField: 'spid',connectToField: 'spid',as: 'comments',maxDepth: 2}}",
                     "{$unwind: {path: '$comments', includeArrayIndex: 'comments.commentSeq', preserveNullAndEmptyArrays: false}}",

@@ -15,7 +15,8 @@ import org.springframework.stereotype.Service;
 
 import lombok.AllArgsConstructor;
 
-@Service @AllArgsConstructor
+@Service 
+@AllArgsConstructor
 public class Fifaon4Service{
     @Autowired 
     private PlayerRepository playerRepository;

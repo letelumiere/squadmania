@@ -1,5 +1,8 @@
 package com.likeurator.squadmania.domain.model;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 import org.joda.time.LocalDateTime;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
@@ -12,7 +15,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Document(collection = "users_test") @Data @AllArgsConstructor @NoArgsConstructor
+@Document(collection = "users_test") 
+@Data @AllArgsConstructor @NoArgsConstructor
 public class User {
     @Id @Indexed(unique = true) private String _id;
     @Field(name = "username") private String username;
@@ -27,6 +31,7 @@ public class User {
     @Field(name = "icon") private String icon;
     @Field(name = "other1") private String other1;
     @Field(name = "other2") private int other2;
+    @Field(name = "Roles") Collection<Role> roles = new ArrayList<>();
     @Field(name = "created_at") @CreatedDate private LocalDateTime created_at;
     @Field(name = "modified_at") @LastModifiedDate private LocalDateTime modified_at;
 }
