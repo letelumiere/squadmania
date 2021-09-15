@@ -10,7 +10,9 @@ import org.springframework.data.mongodb.core.convert.DefaultMongoTypeMapper;
 import org.springframework.data.mongodb.core.convert.MappingMongoConverter;
 import org.springframework.data.mongodb.core.mapping.MongoMappingContext;
 
-@Configuration
+import lombok.AllArgsConstructor;
+
+@Configuration @AllArgsConstructor
 public class MongoDBConfiguration  {
     @Autowired private MongoDatabaseFactory mongoDatabaseFactory;
     @Autowired private MongoMappingContext mongoMappingContext;
@@ -22,4 +24,6 @@ public class MongoDBConfiguration  {
         converter.setTypeMapper(new DefaultMongoTypeMapper(null));
         return converter;
     }
+
+    
 }

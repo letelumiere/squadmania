@@ -15,7 +15,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Document(collection = "users_test") 
+@Document(collection = "users_n_roles_test") 
 @Data @AllArgsConstructor @NoArgsConstructor
 public class User {
     @Id @Indexed(unique = true) private String _id;
