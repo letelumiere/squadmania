@@ -33,9 +33,11 @@ squadmania의 사용자 계정 정보의 CRUDS 구현.
 2021/09/02 - 12: 40
 패키지 구조 변경, 세부 소스 교열.
 
-20021/09/06 - 13:19
+2021/09/06 - 13:19
 권한 부여 설정을 위한 클래스 생성.
 
+2021/09/15 - 16:08
+board CRUD 작성, Authorization, authentication, securityConfiguration 작성.
 
 개발환경
 Microsoft Windows 11, Amazon Linux 2, Visual Studio code, AWS EC2, JAVA 15.1 , MongoDB 4.4.  
